@@ -1,0 +1,472 @@
+/* ==GENERAL-SETTING== *//
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+.clearfix:after
+  clear: both
+
+ul, menu
+  margin: 0
+  padding: 0
+
+li
+  display: block
+  margin: 0
+  padding: 0
+  list-style: none
+
+p
+  margin: 0
+  padding: 0
+
+a
+  margin: 0
+  padding: 0
+  text-decoration: none
+  transition: 0.3s
+
+a:hover
+  color: rgba(231, 67, 67, 0.7)
+  transition: 0.3s
+
+h1, h2, h3, h4
+  margin: 0
+  padding: 0
+
+html
+  max-width: 100%
+  height: 100%
+
+body
+  max-width: 100%
+  height: 100%
+  font-family: 'Rubik', sans-serif
+  font-size: 14px
+  line-height: 23px
+  background-color: #fff
+  color: #999
+  margin: 0
+
+.wrap
+  height: 100%
+  min-width: 100%
+  display: grid
+  grid-template-rows: 1fr auto
+  position: relative
+
+
+// header
+// top side header
+.header
+  width: 100%
+  position: fixed
+  transition: 0.5s
+  z-index: 5
+
+.wrap-top-nav
+  width: 100%
+  border-bottom: 1px solid #f1f1f1
+  background: #fbfbfb
+  box-sizing: border-box
+  transition: 0.5s
+
+.header-scroll
+  margin-top: -37px
+  transition: 0.5s
+
+.top-nav
+  width: 65%
+  margin: 0 auto
+
+.top-nav-list
+  display: grid
+  grid-template-columns: 15% 15% 70%
+
+.top-nav-item:nth-child(1), .top-nav-item:nth-child(2)
+  box-sizing: border-box
+  border-left: 1px solid #f1f1f1
+  display: grid
+  grid-template-columns: 15% 85%
+  align-items: center
+  justify-content: center
+  padding: 10px 20px
+  font-size: 1.1em
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+
+.top-nav-item:nth-child(1)::before
+  content: "\f095"
+
+.top-nav-item:nth-child(2)::before
+  content: "\f0e0"
+
+.top-nav-item
+  position: relative
+
+.noreg-list, .reg-list
+  width: 100%
+  text-align: right
+  position: absolute
+  top: 0
+
+.noreg-list
+  display: none
+
+.noreg-item, .reg-item
+  display: inline-block
+
+.noreg-item:nth-child(2)
+ width: 270px
+
+.noreg-link, .reg-link
+  display: grid
+  grid-template-columns: 25% 75%
+  width: auto
+  align-items: center
+  justify-content: center
+  padding: 10px 30px
+  text-align: left
+  font-size: 0.9em
+  border-radius: 3px
+  background: #3498db
+  color: #fff
+  transition: 0.5s
+  font-family: FontAwesome
+  font-size: 1.1em
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+
+.noreg-link:hover, .reg-link:hover
+  background: #5db9e8
+  color: #fff
+  transition: 0.5s
+
+.reg-item:nth-child(2) .reg-link
+  background: #d9534f
+  transition: 0.5s
+
+.reg-item:nth-child(2):hover .reg-link
+  background: #dd1f18
+  transition: 0.5s
+
+.noreg-item:nth-child(1) .noreg-link::before
+  content: "\f023"
+  margin-right: 5px
+
+.noreg-item:nth-child(2) .noreg-link::before
+  content: "\f019"
+  margin-right: 5px
+
+.reg-item:nth-child(1) .reg-link::before
+  content: "\f007"
+  margin-right: 5px
+
+.reg-item:nth-child(2) .reg-link::before
+  content: "\f08b"
+  margin-right: 5px
+
+.font-normal
+  font-family: 'Rubik', sans-serif
+  margin-top: 2px
+  font-size: 0.8em
+
+// main side header
+.nav
+  width: 100%
+  padding: 20px 0
+  transition: 0.5s
+
+.nav-scroll
+  background: #fff
+  padding: 10px 0
+  transition: 0.5s
+  box-shadow: 0px 3px 2px 0px rgba(50, 50, 50, 0.1)
+
+.nav-list
+  width: 65%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 55% auto auto auto
+
+.nav-item:nth-child(2), .nav-item:nth-child(3), .nav-item:nth-child(4)
+  display: grid
+  align-items: center
+  justify-content: center
+
+.logo-nav
+  height: 42px
+
+.nav-link
+  color: #555
+  display: block
+  font-size: 1em
+  padding: 10px 20px
+  transition: 0.5s
+  text-transform: uppercase
+
+.nav-link:hover
+  background: #5db9e8
+  color: #fff
+  border-radius: 3px
+  transition: 0.5s
+
+// footer
+.footer
+  width: 100%
+
+.wrap-top-footer
+  width: 100%
+  background: #414547
+
+.top-footer
+  padding: 30px 0
+  width: 65%
+  margin: 0 auto
+
+.logo-footer
+  height: 60px
+
+.bottom-footer
+  width: 100%
+  padding: 15px 0
+  background: #35383A
+  color: #5f5f5f
+
+.footer-list
+  width: 65%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 70% auto auto auto
+
+.footer-link
+  color: #5f5f5f
+  text-transform: uppercase
+  font-size: 0.9em
+
+.footer-link:hover
+  color: #8a8888
+
+// main
+// banner
+.main
+  padding-top: 127px
+  box-sizing: border-box
+
+.banner
+  width: 100%
+  height: 500px
+  background-image: url(/img/dest/icon/slidernew.jpg)
+  background-size: cover
+  background-position: center top
+
+.banner-list
+  position: relative
+
+.banner-item:nth-child(1)
+  color: #555
+  position: absolute
+  font-size: 1.5em
+  font-weight: 800
+  text-transform: uppercase
+  top: 50px
+  left: 467px
+
+.banner-item:nth-child(2)
+  color: #31a3dd
+  position: absolute
+  font-size: 2.8em
+  font-weight: 800
+  text-transform: uppercase
+  top: 100px
+  left: 567px
+
+.banner-item:nth-child(3)
+  color: #31a3dd
+  position: absolute
+  font-size: 2.8em
+  font-weight: 800
+  text-transform: uppercase
+  top: 150px
+  left: 667px
+
+.banner-item:nth-child(4)
+  color: #555
+  position: absolute
+  font-size: 2.8em
+  font-weight: 800
+  text-transform: uppercase
+  top: 200px
+  left: 767px
+
+//service
+.service
+  width: 100%
+
+.service-list
+  width: 65%
+  margin: 30px auto
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 30px
+
+.service-item
+  border-radius: 2px
+  border: 3px solid #f1f1f1
+  padding: 30px 20px 20px
+  margin: 30px 0 0
+  text-align: center
+  box-sizing: border-box
+  position: relative
+  transition: 0.5s
+
+.wrap-img-adv
+  width: 64px
+  height: 64px
+  background: #fff
+  margin: -50px auto 0 auto
+  transition: 0.5s
+
+.service-item:hover
+  border-color: #31a3dd
+  transition: 0.5s
+
+.service-item:hover .wrap-img-adv
+  margin: -60px auto 10px auto
+  transition: 0.5s
+
+.service-head
+  font-size: 1.3em
+  font-weight: bold
+  line-height: 24px
+
+.service-text
+  font-size: 1em
+  line-height: 24px
+
+// info
+.info-list
+  width: 65%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 30px
+  padding-bottom: 30px
+
+.info-head
+  padding-bottom: 10px
+  margin-bottom: 20px
+  position: relative
+  font-size: 1.6em
+
+.info-head::after
+  position: absolute
+  width: 50px
+  height: 3px
+  background: #f1f1f1
+  content: ''
+  left: 0
+  bottom: 0
+
+.info-article
+  font-size: 1.4em
+  padding-bottom: 10px
+
+.info-text
+  font-size: 1em
+  padding-bottom: 20px
+
+.data-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 5px
+
+.data-item
+  height: 135px
+  background: #31a3dd
+  color: #ffffff
+  text-align: center
+  display: grid
+  align-items: center
+  justify-content: center
+  transition: 0.5s
+
+.data-item:hover
+  background: #555
+  transition: 0.5s
+
+.data-numder
+  font-size: 3.8em
+  padding: 10px
+
+//work
+.work
+  width: 100%
+  padding-bottom: 30px
+
+.wrap-bread
+  border-bottom: 1px solid #f1f1f1
+  background: #fbfbfb
+  box-sizing: border-box
+  padding: 10px 0 20px 0
+  margin-bottom: 30px
+
+.bread-list
+  width: 65%
+  margin: 0 auto
+
+.bread-item
+  display: inline-block
+
+.bread-item:nth-child(2)
+  padding: 0 15px
+
+.bread-link
+  color: #999
+
+.bread-link:hover
+  color: #31a3dd
+
+.work-info-list
+  width: 65%
+  margin: 0 auto
+
+.work-article-item
+  box-sizing: border-box
+  font-size: 1.6em
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  padding-bottom: 20px
+
+.work-info-item
+  padding-bottom: 30px
+  font-size: 1.2em
+
+.work-article-font
+  font-weight: bold
+  font-family: 'Rubik', sans-serif
+  padding-left: 10px
+
+.work-article-item:nth-child(1)::before
+  content: "\f0b1"
+
+.work-article-item:nth-child(3)::before
+  content: "\f095"
+
+.work-article-item:nth-child(5)::before
+  content: "\f0f4"
+
+.work-article-item:nth-child(7)::before
+  content: "\f0ad"
+
+.work-article-item:nth-child(9)::before
+  content: "\f00c"
+
+.work-article-item:nth-child(11)::before
+  content: "\f0e0"
